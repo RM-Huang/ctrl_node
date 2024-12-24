@@ -38,13 +38,9 @@ namespace Controller{
         input.vel_last = u.velocity;
         
         //limit yaw
-<<<<<<< HEAD
         // double odomYaw = q2yaw(odom.q);
         double odomYaw = q2yaw(odom.q);
-        double omega_err(des.yaw - odomYaw);
-=======
         double omega_err(des.yaw - input.yaw_last);
->>>>>>> 7f501b5762bfb252f5d22141b2782e27051795bf
         omega_err = omega_err > param_.kine_cons.omega_yaw_max?param_.kine_cons.omega_yaw_max:omega_err;
         omega_err = omega_err < -param_.kine_cons.omega_yaw_max?-param_.kine_cons.omega_yaw_max:omega_err;
         u.yaw =  input.yaw_last + omega_err;

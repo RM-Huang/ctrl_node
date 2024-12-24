@@ -5,14 +5,8 @@ gra         : 9.81
 max_manual_vel: 0.0
 
 takeoff_state:
-<<<<<<< HEAD
     height: 2.0 # m
     speed: 0.6 # m/s
-=======
-    height: 1.2 # m
-    takeoff_pos_x: 0.0
-    takeoff_pos_y: 0.0
->>>>>>> 7f501b5762bfb252f5d22141b2782e27051795bf
 
 fsmparam:
     frequncy: 100
@@ -35,17 +29,16 @@ thrust_model: # The model that maps thrust signal u(0~1) to real thrust force F(
     hover_percentage: 0.5  # Thrust percentage in Stabilize/Arco mode # *
 
 gain: 
-<<<<<<< HEAD
     # velocity PID
-    Kvp0: 1.0 #2.0
-    Kvp1: 1.0 #1.5
-    Kvp2: 1.0 #1.5
+    Kvp0: 1 #2.0
+    Kvp1: 1 #1.5
+    Kvp2: 1 #1.5
     Kvi0: 1.5 #1.8
     Kvi1: 1.5 #1.8
     Kvi2: 1.5 #1.8
-    Kvd0: 1
-    Kvd1: 1
-    Kvd2: 1
+    Kvd0: 120
+    Kvd1: 120
+    Kvd2: 100
     # attitude PID
     Kp0: 1.5 #2.0
     Kp1: 1.5 #1.5
@@ -70,17 +63,6 @@ gain:
     Omg_eso_pos0: 1
     Omg_eso_pos1: 1
     Omg_eso_pos2: 1
-=======
-    Kvp0: 1 #2.0
-    Kvp1: 1 #1.5
-    Kvp2: 1 #1.5
-    Kvi0: 1.5 #1.8
-    Kvi1: 1.5 #1.8
-    Kvi2: 1.5 #1.8
-    Kvd0: 120
-    Kvd1: 120
-    Kvd2: 100
->>>>>>> 7f501b5762bfb252f5d22141b2782e27051795bf
 
 msg_timeout:
     odom: 0.5
